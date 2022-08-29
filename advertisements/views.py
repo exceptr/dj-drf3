@@ -15,6 +15,6 @@ class AdvertisementViewSet(ModelViewSet):
 
     def get_permissions(self):
         """Получение прав для действий."""
-        if self.request.method in ['POST', 'DELETE', 'PATCH']:
+        if self.request.method in ['POST', 'DELETE', 'PATCH', 'PUT']:
             return [IsOwner()]
         return []
